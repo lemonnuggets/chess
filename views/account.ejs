@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Account Info</title>
+    <h1>Welcome <%= name %>!</h1>
+  </head>
+
+  <body>
+    <h3>Account Info</h3>
+    <div>
+      <ul>
+        <li>Username : <%= username %></li>
+        <li>Games Played: <%= gamesPlayed %></li>
+        <li>Wins : <%= wins %></li>
+        <li>Losses : <%= losses %></li>
+        <li>Draw : <%= draw %></li>
+      </ul>
+    </div>
+    <form action="/play" method="GET">
+      <div>
+        <label for="room">Room</label><br />
+        <input type="number" id="room" name="room" required />
+      </div>
+      <br />
+      <button type="submit">Play Chess</button>
+    </form>
+    <form action="/logout?_method=DELETE" method="POST">
+      <button type="submit">Log Out</button>
+    </form>
+  </body>
+</html>
